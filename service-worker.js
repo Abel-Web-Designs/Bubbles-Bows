@@ -16,7 +16,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('my-pwa-cache').then(function(cache) {
       return cache.addAll([
-        'index.php',
+        'index.html',
         'img/logo192.png',
         'img/logo512.png'
       ]);
