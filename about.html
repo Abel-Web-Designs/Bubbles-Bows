@@ -1,32 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <title>Bubbles & Bows | About</title>
-</head>
+    <style>
+      .carousel-img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+      .carousel-img {
+        width: 75%;
+      }
+      }
+
+      @media (max-width: 576px) {
+      .carousel-img {
+        width: 100%;
+      }
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+      }
+  
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+  
+      .cardcontainer {
+        padding: 2px 16px;
+      }
+    </style>
+  </head>
 
  <body>
-    <!-- NAV BAR START-->
-    <nav>
-      <ul>
-        <li><img src="img/logo_navbar.png"></li>
-        <li class="mrbubble"><a href="index.html">Home</a></li>
-        <li class="mrbubble"><a href="pricing.html">Pricing</a></li>
-        <li class="mrbubble"><a href="about.html">About Us</a></li>
-        <li class="mrbubble"><a href="contact.html">Contact</a></li>
-      </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fc65e6;">
+      <a class="navbar-brand" href="#">Bubbles & Bows</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            </ul>
+        </div>
     </nav>
-    <!-- NAV BAR END-->
 
     <div class="container">
         <center>
@@ -35,20 +74,12 @@
               <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-interval="3000">
-                    <img src="img/owner1.png" class="d-block w-100" alt="...">
+                    <img src="img/owner1.png" class="d-block carousel-img" alt="...">
                   </div>
                   <div class="carousel-item" data-interval="3000">
-                    <img src="img/owner2.png" class="d-block w-100" alt="...">
+                    <img src="img/owner2.png" class="d-block carousel-img" alt="...">
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
               </div>
               <div class="cardcontainer">
                 <h4><b>Hadley Teague</b></h4>
@@ -57,13 +88,16 @@
                     the daughter of Chad & Brooke Teague and am the oldest of 3! My sister Campbell (she’s 19) works in the shop with me almost everyday! We have 4 dogs: 
                     Ari (pugle basset hound mix), Flint (mini golden doodle), Ollie (English bulldog beagle mix), and Mae (a chocolate lab)! Thank you all for making my 
                     little dream of grooming dogs a reality!! I appreciate you all!
-                    <br>
+                    <br><br>
                     We also just recently won Lawrence County’s Best Grooming Salon of 2024!
                 </p>
               </div>
             </div>
         </center>
     </div>
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
  </body>
  <script>
   if ('serviceWorker' in navigator) {
