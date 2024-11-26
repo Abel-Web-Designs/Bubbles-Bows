@@ -39,6 +39,13 @@
       .cardcontainer {
         padding: 2px 16px;
       }
+
+      .cropped-img {
+        width: 600px;  /* Set desired width */
+        height: 599px; /* Set desired height */
+        object-fit: cover; /* Crop the image to fill the box */
+        object-position: center; /* Center the cropped area */
+      }
     </style>
   </head>
 
@@ -80,10 +87,10 @@
                     <img src="img/owner2.png" class="d-block carousel-img" alt="...">
                   </div>
                   <div class="carousel-item" data-interval="3000">
-                    <img src="img/owner3.jpg" class="d-block carousel-img" alt="...">
+                    <img src="img/owner3.jpg" class="d-block cropped-img" alt="...">
                   </div>
                   <div class="carousel-item" data-interval="3000">
-                    <img src="img/owner4.jpg" class="d-block carousel-img" alt="...">
+                    <img src="img/owner4.jpg" class="d-block cropped-img" alt="...">
                   </div>
                 </div>
               </div>

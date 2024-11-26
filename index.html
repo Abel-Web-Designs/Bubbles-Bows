@@ -30,6 +30,7 @@
   </head>
 
   <body>
+    
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fc65e6;">
       <a class="navbar-brand" href="#">Bubbles & Bows</a>
@@ -71,48 +72,69 @@
 
     <!-- Gallery -->
     <div class="jumbotron">
-      <center><h1 class="display-4">Gallery</h1></center>
       <center>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-interval="2000">
-            <img src="img/gallery/1.png" class="d-block carousel-img" alt="...">
-          </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src="img/gallery/2.png" class="d-block carousel-img" alt="...">
-          </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src="img/gallery/3.png" class="d-block carousel-img" alt="...">
-          </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src="img/gallery/4.png" class="d-block carousel-img" alt="...">
-          </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src="img/gallery/5.png" class="d-block carousel-img" alt="...">
-          </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src="img/gallery/6.png" class="d-block carousel-img" alt="...">
-          </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src="img/gallery/7.png" class="d-block carousel-img" alt="...">
-          </div>
-          <div class="carousel-item" data-interval="2000">
-            <img src="img/gallery/8.png" class="d-block carousel-img" alt="...">
-          </div>
+        <h1 class="display-4">Gallery</h1>
+      </center>
+      <center>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators" id="carousel-indicators"></ol>
+          <div class="carousel-inner" id="carousel-inner"></div>
         </div>
-      </div>
       </center>
     </div>
+    
+    <!-- Script for Gallery -->
+    <script>
+      const images = [
+        "img/gallery/xmas1.jpg",
+        "img/gallery/xmas2.jpg",
+        "img/gallery/xmas3.jpg",
+        "img/gallery/xmas4.jpg",
+        "img/gallery/xmas5.jpg",
+        "img/gallery/xmas6.jpg",
+        "img/gallery/xmas7.jpg",
+        "img/gallery/xmas8.jpg",
+        "img/gallery/xmas9.jpg",
+        "img/gallery/xmas10.jpg",
+        "img/gallery/xmas11.jpg",
+        "img/gallery/xmas12.jpg",
+        "img/gallery/1.png",
+        "img/gallery/2.png",
+        "img/gallery/3.png",
+        "img/gallery/4.png",
+        "img/gallery/5.png",
+        "img/gallery/6.png",
+        "img/gallery/7.png",
+        "img/gallery/8.png"
+      ];
+    
+      const indicators = document.getElementById("carousel-indicators");
+      const inner = document.getElementById("carousel-inner");
+    
+      images.forEach((image, index) => {
+        // Create carousel indicator
+        const indicator = document.createElement("li");
+        indicator.setAttribute("data-target", "#carouselExampleIndicators");
+        indicator.setAttribute("data-slide-to", index);
+        if (index === 0) indicator.classList.add("active");
+        indicators.appendChild(indicator);
+    
+        // Create carousel item
+        const item = document.createElement("div");
+        item.classList.add("carousel-item");
+        if (index === 0) item.classList.add("active");
+        item.setAttribute("data-interval", "2000");
+    
+        const img = document.createElement("img");
+        img.src = image;
+        img.classList.add("d-block", "carousel-img");
+        img.alt = `Image ${index + 1}`;
+    
+        item.appendChild(img);
+        inner.appendChild(item);
+      });
+    </script>
+    
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
